@@ -20,7 +20,7 @@ func TestSearchSuccess(t *testing.T) {
 	for _, test := range tests {
 		res := Sort(test.list)
 		if compareList(res, test.result) == false {
-			t.Error("Error for list %v ,expected %v", res, test.result)
+			t.Errorf("Error for list %v ,expected %v", res, test.result)
 		}
 	}
 }
